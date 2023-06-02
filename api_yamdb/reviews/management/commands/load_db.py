@@ -1,11 +1,9 @@
 import csv
-
 from pathlib import Path
-from django.core.management.base import BaseCommand
 
-from reviews.models import (Category, Genre,
-                            Title, TitleGenre,
-                            User, Review, Comment)
+from django.core.management.base import BaseCommand
+from reviews.models import (Category, Comment, Genre, Review, Title,
+                            TitleGenre, User)
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 FILES_MODELS = {'users.csv': User,

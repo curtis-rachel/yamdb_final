@@ -1,13 +1,10 @@
+from api.validation import validate_year
 from django.contrib.auth import get_user_model
-from django.core.exceptions import ValidationError
 from django.contrib.auth.validators import ASCIIUsernameValidator
-
+from django.core.exceptions import ValidationError
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-
-from api.validation import validate_year
-from reviews.models import Comment, Category, Genre, Review, Title
-
+from reviews.models import Category, Comment, Genre, Review, Title
 
 User = get_user_model()
 REGEX = r"^[\w.@+-]+\Z"

@@ -1,27 +1,24 @@
+from api.filters import MyTitleFilter
+from api.mixins import ListCreateDeleteViewSet
+from api.pagination import MyPaginator
+from api.permissions import (IsAdmin, IsAdminModeratorAuthorOrReadOnly,
+                             IsAdminOrReadOnly)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             SignUpSerializer, TitleSafeSerializer,
+                             TitleSerializer, TokenSeriliazer, UserSerializer)
 from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import default_token_generator
-from django.db.models import Avg, fields, ExpressionWrapper
-from django_filters.rest_framework import DjangoFilterBackend
+from django.db.models import Avg, ExpressionWrapper, fields
 from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, permissions, status, viewsets
 from rest_framework.decorators import action, api_view
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.filters import MyTitleFilter
-from api.mixins import ListCreateDeleteViewSet
-from api.pagination import MyPaginator
-from api.permissions import (IsAdmin,
-                             IsAdminModeratorAuthorOrReadOnly,
-                             IsAdminOrReadOnly)
-from api.serializers import (SignUpSerializer, TokenSeriliazer, UserSerializer,
-                             CommentSerializer, ReviewSerializer,
-                             CategorySerializer, GenreSerializer,
-                             TitleSerializer, TitleSafeSerializer)
-from reviews.models import Title, Review, Comment, Category, Genre
-
+from reviews.models import Category, Comment, Genre, Review, Title
 
 User = get_user_model()
 

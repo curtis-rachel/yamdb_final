@@ -1,13 +1,10 @@
+from api.validation import validate_year
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import ASCIIUsernameValidator
-from django.core.validators import (
-    MaxValueValidator,
-    MinLengthValidator,
-    )
+from django.core.validators import MaxValueValidator, MinLengthValidator
 from django.db import models
 from django.db.models import TextField
 
-from api.validation import validate_year
 
 class Role:
     USER = "user"
