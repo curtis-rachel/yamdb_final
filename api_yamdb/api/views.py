@@ -109,10 +109,8 @@ def token(request):
 def get_value(self, field, title=None):
     value_id = self.kwargs.get(f'{field}')
     if title:
-        value = get_object_or_404(Review, id=value_id, title=title)
-        return value
-    value = get_object_or_404(Title, id=value_id)
-    return value
+        return get_object_or_404(Review, id=value_id, title=title)
+    return get_object_or_404(Title, id=value_id)
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
