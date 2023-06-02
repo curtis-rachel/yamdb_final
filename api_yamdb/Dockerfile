@@ -10,6 +10,6 @@ ENV LANGUAGE C.UTF-8
 
 ENV LANG C.UTF-8
 
-COPY api_yamdb/ /app
+COPY . /app
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
