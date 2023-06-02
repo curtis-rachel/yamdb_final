@@ -24,3 +24,4 @@ class TestDockerfileCompose:
         assert re.search(r'image:\s+postgres:', docker_compose), (
             'Проверьте, что  в файл docker-compose.yaml добавлен образ postgres:latest'
         )
+
