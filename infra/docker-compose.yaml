@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   db:
@@ -10,6 +10,8 @@ services:
 
   web:
     image: curtisrachel/api_yamdb:latest
+    context: ../
+    dockerfile: api_yamdb/Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
