@@ -8,7 +8,6 @@ from django.db.models import TextField
 
 from api.validation import validate_year
 
-
 class Role:
     USER = "user"
     MODERATOR = "moderator"
