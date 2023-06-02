@@ -1,8 +1,8 @@
+from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.validators import ASCIIUsernameValidator
 from django.core.validators import (
     MinLengthValidator,
     MaxValueValidator)
-from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.validators import ASCIIUsernameValidator
 from django.db import models
 from django.db.models import TextField
 
