@@ -1,3 +1,5 @@
+[![Django-app workflow](https://github.com/curtis-rachel/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/DeffronMax/yamdb_final/actions/workflows/main.yml)
+
 # API_YAMDB
 REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
 
@@ -52,7 +54,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ### Создаем дамп базы данных (нет в текущем репозитории):
 ```bash
-docker-compose exec web python manage.py dumpdata > dumpPostrgeSQL.json
+docker-compose exec web python manage.py dumpdata > fixtures.json
 ```
 
 ### Останавливаем контейнеры:
