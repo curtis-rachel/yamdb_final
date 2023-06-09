@@ -1,4 +1,4 @@
-[![Django-app workflow](https://github.com/curtis-rachel/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/DeffronMax/yamdb_final/actions/workflows/main.yml)
+[![Django-app workflow](https://github.com/curtis-rachel/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/curtis-rachel/yamdb_final/actions/workflows/yamdb_workflow.yml/)
 
 # API_YAMDB
 REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
@@ -77,4 +77,4 @@ SECRET_KEY=key
 ```
 
 ## Документация API YaMDb
-Документация доступна по эндпойнту: http://localhost/redoc/
+Документация доступна по эндпойнту: http://84.201.140.192/redoc/
